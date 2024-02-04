@@ -1,4 +1,17 @@
-* {
+
+
+$bg-gradient-color: linear-gradient(90deg, rgb(44, 38, 85) 0%, rgba(100, 115, 255, 1) 100%);
+$btn-gradient-color: linear-gradient(90deg, rgba(93, 12, 255, 1) 0%, rgba(155, 0, 250, 1) 100%);
+$edit-btn-gradient-color: linear-gradient(90deg, rgba(20, 159, 255, 1) 0%, rgba(17, 122, 255, 1) 100%);
+$input-border-color: #5d0cff;
+$edit-input-border-color: #149fff;
+$r1-bg-color: linear-gradient(90deg, rgb(185, 143, 113) 0%, rgb(83, 65, 58) 100%);
+$r2-bg-color: linear-gradient(90deg, rgba(93, 12, 255, 1) 0%, rgba(155, 0, 250, 1) 100%);
+$r3-bg-color: linear-gradient(90deg, rgb(129, 214, 73) 0%, rgba(129, 214, 73) 100%);
+$r4-bg-color: linear-gradient(90deg, rgba(20, 159, 255, 1) 0%, rgba(17, 122, 255, 1) 100%);
+$icon-color: #fff; 
+
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -7,9 +20,7 @@
 }
 
 body {
-  background: linear-gradient(90deg,
-      rgb(44, 38, 85) 0%,
-      rgba(100, 115, 255, 1) 100%);
+  background: $bg-gradient-color;
 }
 
 .todo-app {
@@ -43,7 +54,7 @@ h1 {
 .todo-input {
   padding: 4% 8% 4% 4%;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
+  border: 2px solid $input-border-color;
   outline: none;
   width: 68%;
   background: transparent;
@@ -61,22 +72,18 @@ h1 {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(90deg,
-      rgba(93, 12, 255, 1) 0%,
-      rgba(155, 0, 250, 1) 100%);
+  background: $btn-gradient-color; 
   color: #fff;
   text-transform: capitalize;
 }
 
 .todo-input.edit {
-  border: 2px solid #149fff;
+  border: 2px solid $edit-input-border-color;
 }
 
 .todo-button.edit {
-  background: linear-gradient(90deg,
-      rgba(20, 159, 255, 1) 0%,
-      rgba(17, 122, 255, 1) 100%);
-  padding: 4%;
+  background: $edit-btn-gradient-color;
+    padding: 4%;
 }
 
 .todo-container {
@@ -91,30 +98,23 @@ h1 {
   align-items: center;
   margin: 1% auto;
   color: #fff;
-  background: linear-gradient(90deg,
-      rgb(185, 143, 113) 0%,
-      rgb(83, 65, 58) 100%);
+  background: $r1-bg-color;
   padding: 3%;
   border-radius: 5px;
   width: 90%;
-}
 
-.todo-row:nth-child(4n + 1) {
-  background: linear-gradient(90deg,
-      rgba(93, 12, 255, 1) 0%,
-      rgba(155, 0, 250, 1) 100%);
-}
 
-.todo-row:nth-child(4n + 2) {
-  background: linear-gradient(90deg,
-      rgb(129, 214, 73) 0%,
-      rgba(129, 214, 73) 100%);
-}
+  &:nth-child(4n + 1) {
+    background: $r2-bg-color;
+  }
 
-.todo-row:nth-child(4n + 3) {
-  background: linear-gradient(90deg,
-      rgba(20, 159, 255, 1) 0%,
-      rgba(17, 122, 255, 1) 100%);
+  &:nth-child(4n + 2) {
+    background: $r3-bg-color;
+  }
+
+  &:nth-child(4n + 3) {
+    background: $r4-bg-color;
+  }
 }
 
 .icons {
@@ -126,9 +126,9 @@ h1 {
 
 .delete-icon {
   margin-right: 2%;
-  color: #fff;
+  color: $icon-color;
 }
 
 .edit-icon {
-  color: #fff;
+  color: $icon-color;
 }
